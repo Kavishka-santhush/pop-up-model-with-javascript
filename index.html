@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .model {
+            background-color: gray;
+            width: 400px;
+            text-align: center;
+            padding: 20px;
+            border: white 2px solid;
+            position: absolute;
+            left: 500px;
+            top: -250px;
+            transition: 0.5s;
+        }
+
+        button {
+            padding: 20px;
+            background-color: rgb(204, 89, 89);
+            font-size: 40px;
+        }
+
+        button:hover {
+            background-color: rgb(214, 14, 14);
+            cursor: pointer;
+        }
+
+        h1 {
+            display: inline;
+        }
+
+        span {
+            margin-left: 80px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        span:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        .container {
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="openmodel()">Open model</button>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus libero voluptatem hic tempora tenetur
+            quisquam
+            porro. Quo ad ipsum, modi quae cumque id quia quis eligendi molestias assumenda, atque ratione!</h2>
+    </div>
+
+    <div class="model">
+        <h1>This is the model</h1>
+        <span onclick="closemodel()">&times</span>
+    </div>
+    <script>
+        model = document.getElementsByClassName("model")[0];
+        container = document.getElementsByClassName("container")[0];
+        function openmodel() {
+            container.style.opacity = "0.2";
+            model.style.top = "250px";
+        }
+        function closemodel() {
+            container.style.opacity = "1";
+            model.style.top = "-250px";
+        }
+        window.onclick = function (event) {
+            if (event.target == model) {
+                model.style.top = "-250px";
+            }
+        }
+    </script>
+</body>
+
+</html>
